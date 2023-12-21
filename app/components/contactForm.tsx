@@ -25,13 +25,13 @@ export default function ContactForm() {
   const contactInfoSchema = yup.object().shape({
     name: yup.string().required().min(5).max(20),
     fatherName: yup.string().required().min(5).max(20),
-    email: yup.string().email().required(),
+    email: yup.string().email('must be a valid email').required(),
     message: yup.string().required(),
     userName: yup.string().min(5).max(20).required(),
     country: yup.string().min(4).max(20).required(),
     city: yup.string().min(4).max(20).required(),
-    // cnic:yup.number().min(13).required(),
-    phone: yup.number().min(11).required(),
+    cnic:yup.number().min(13).required(),
+    phone: yup.number().min(11,).required(),
 
   })
   const [contactList, setContactList] = useState<contactTypes[]>([])
