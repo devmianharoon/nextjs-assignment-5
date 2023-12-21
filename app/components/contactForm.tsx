@@ -68,9 +68,7 @@ export default function ContactForm() {
       console.log("error", err.errors);
     }
   }
-  const onClickResopnseHandler = async () => {
-    let response = await contactInfo
-  }
+  
   return (
     <>
       <main className="max-w-2xl mx-auto mt-8 p-4">
@@ -98,7 +96,7 @@ export default function ContactForm() {
               type="submit"
               className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
             >
-              Resopnse
+              Submit
             </button>
           </div>
         </form>
